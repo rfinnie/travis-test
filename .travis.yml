@@ -1,0 +1,9 @@
+language: shell
+arch:
+- arm64
+os: linux
+dist: bionic
+services:
+- docker
+script:
+- docker build .
