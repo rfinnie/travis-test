@@ -3,7 +3,13 @@ arch:
 - arm64
 os: linux
 dist: bionic
-services:
-- docker
+#services:
+#- docker
+addons:
+  apt:
+    packages:
+    - lshw
 script:
-- docker build .
+- cat /proc/cpuinfo
+- sudo lshw
+#- docker build .
